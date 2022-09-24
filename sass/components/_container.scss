@@ -1,0 +1,14 @@
+body {
+    color: $color-primary;
+    background-color: $bg-color-primary;
+    font-family: $font-main;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    width: 1200px;
+}

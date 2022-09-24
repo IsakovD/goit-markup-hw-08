@@ -1,0 +1,44 @@
+.checkbox {
+
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+    &--none {
+            appearance: none;
+            position: absolute;
+        }
+    
+    &__checker-icon {
+        position: relative;
+        display: block;
+        width: 16px;
+        height: 15px;
+        margin-right: 8px;
+        border: 2px solid $color-primary;
+        border-radius: 2px;
+            
+        transition: border-color $cubic, background-color $cubic;
+    }
+
+    &--none:checked + &__checker-icon {
+        border-color: $color-accent;
+        background-color: $color-accent;
+    }
+
+    &__checker-box {
+        position: absolute;
+        display: block;
+        left: -2px;
+        top: -2px;
+            
+        width: 16px;
+        height: 15px;
+        fill: currentColor;
+        background-color: transparent;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+

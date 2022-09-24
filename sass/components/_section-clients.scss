@@ -1,0 +1,58 @@
+.section-clients {
+    @include section-padd (94px, 94px);
+
+    &__title {
+        text-align: center;
+        margin-bottom: 50px;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.1666;
+            
+        color: $color-primary;
+    }
+    
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+    
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 170px;
+        height: 92px;
+        color: $svg-social-icon;
+        border: 1px solid $svg-social-icon;
+        
+        border-radius: 4px;
+        
+        transform: scale(1);
+        transition: box-shadow $cubic, border-color $cubic, color $cubic,
+        transform $cubic;
+    }
+        
+    &__link:hover,
+    &__link:focus {
+        color: $color-accent;
+        border-color: $color-accent;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        transform: scale(1.05);
+    }
+    
+    &__icon {
+        fill: currentColor;
+         background-color: transparent;
+    }
+}

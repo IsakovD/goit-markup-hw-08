@@ -1,0 +1,46 @@
+.link {
+    display: block;
+    transition: color $cubic;
+    
+    &:hover,
+    &:focus {
+        color: $color-accent;
+    }
+}
+
+.link--current {
+    position: relative;
+    color: $color-accent;
+    overflow: hidden;
+
+    &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            bottom: 0;
+    
+            border-radius: 2px;
+            background-color: $color-accent;
+    
+            animation-name: underline-in;
+            animation-duration: 250ms;
+            animation-timing-function: linear;
+            animation-delay: 100ms;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+}
+
+/* Анимация подчеркивания */
+@keyframes underline-in {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

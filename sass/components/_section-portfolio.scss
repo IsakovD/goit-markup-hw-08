@@ -1,0 +1,118 @@
+.section-portfolio {
+    @include section-padd (94px, 94px);
+
+    &__block:first-child {
+        margin-bottom: 50px;
+    }
+}
+
+.filter-list {
+    display: flex;
+    justify-content: center;
+
+    &__item:not(:last-child) {
+        margin-right: 8px;
+    }
+
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+
+
+    &__item {
+    flex-basis: calc(($grid-item-size / 3) - $card-set-gap);
+    }
+
+    &__item:not(:nth-child(3n)) {
+        margin-right: $card-set-gap;
+    }
+    
+    &__item:not(:nth-last-child(-n + 3)) {
+        margin-bottom: $card-set-gap;
+    }
+
+    &__link {
+        display: block;
+        transition: box-shadow $cubic;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &__link:hover .portfolio-overlay,
+    &__link:focus .portfolio-overlay {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+
+    &__thumb {
+        position: relative;
+         overflow: hidden;
+    }
+            
+        
+    &__thumb:hover::before {
+        content: "";
+        opacity: 1;    
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(33, 150, 243, 0.9);
+
+        transform: translateY(100%);
+        opacity: 0;
+        transition: transform $cubic, opacity $cubic;
+        transform-origin: bottom center;
+    }
+
+    &__link:hover &__overlay,
+    &__link:focus &__overlay {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    &__overlay-text {
+        font-size: 18px;
+        line-height: 1.56;
+        padding: 63px 24px;
+        color: $color-white;
+    }
+
+    &__discr {
+    	padding-top: 20px;
+	    padding-bottom: 20px;
+	    padding-left: 24px;
+	    padding-right: 24px;
+	    border: 1px solid $box-line-color;
+	    border-top: none;
+    }
+
+    &__title {
+        margin-bottom: 4px;
+    
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+    
+        color: $color-primary;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.88;
+    
+        color: $color-secondary;
+    }
+
+}
