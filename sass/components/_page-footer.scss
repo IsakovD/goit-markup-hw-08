@@ -2,20 +2,76 @@
     padding: 60px 0;
     background-color: $bg-color-footer;
 
-    &__section {
-            display: flex;
+    &__section {   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+
+        @media screen and (min-width: 768px) {
             align-items: baseline;
+            flex-direction: row;
+            flex-wrap: wrap;
+            }
+
+        @media screen and (min-width: 1200px) {
+            display: inline-flex;
+            text-align: left;
+            flex-wrap: nowrap;
             margin-left: auto;
             margin-right: auto;
+            }
+        }  
+
+    
+    
+    &__block {
+
+        &:not(:last-child) {
+            margin-bottom: 60px;
+        }
+
+        @media screen and (min-width: 768px) {
+            &:first-child {
+                margin-left: 76px;
+                margin-right: auto;
+            }
+
+            &:nth-child(2) {
+                margin-left: 0;
+                margin-right: 89px;
+            }
+            &:last-child {
+                margin-left: 166px;
+                margin-right: auto;
+            }
+        }
+        
+        @media screen and (min-width: 1200px) {
+            
+            margin-bottom: 0;
+
+            &:not(:last-child) {
+            margin-right: 93px;
+            margin-bottom: 0;
+            }
+
+            &:first-child {
+                margin-right: 70px;
+                margin-left: 0;
+            }
+            
+            &:last-child {
+            margin-left: 0;
+            margin-right: 0;
+                                           }
+        }
     }
 
-    &__block:not(:last-child) {
-        margin-right: 93px;
-    }
 
-    &__block:first-child {
-        margin-right: 70px;
-    }
+
+
 
     &__title {
         margin-bottom: 20px;
@@ -27,12 +83,17 @@
     }
 
     &__list {
-        display: flex;
+        @media screen and (min-width: 1200px) {
+            display: flex
+        }
 
     }
 
     &__item:not(:last-child) {
-        margin-right: 10px;
+        @media screen and (min-width: 1200px) {
+            margin-right: 10px;
+        }
+        
     }
 
     &__icon--ml-10 {
@@ -40,12 +101,19 @@
     }
 
     &__form {
+        width: 450px;
+
+        @media screen and (min-width: 1200px) {
         width: 570px;
-        display: flex;
+        display: flex; 
+        }
+
+
     }
+ 
 
     &__input {
-        width: 358px;
+        width: 450px;
         height: 50px;
         padding: 15px;
         background-color: $bg-color-footer;
@@ -58,6 +126,11 @@
         color: rgba(255, 255, 255, 0.6);
         
         transition: border-color $cubic;
+
+        @media screen and (min-width: 1200px) {
+            width: 358px;
+        }
+
     }
 
     &__input:focus-visible {
@@ -68,15 +141,19 @@
 
     &__button {
         display: flex;
+        margin-top: 20px;
     
         
-        margin: 0;
-        margin-left: auto;
+
         
         width: 200px;
         height: 50px;
         padding: 10px 28px;
-        
+
+        @media screen and (min-width: 1200px) {
+        margin: 0;
+        margin-left: auto;
+        }
         
         
     }
@@ -95,7 +172,12 @@
     margin-top: 20px;
 
     &__list {
+        text-align: center;
         width: 231px;
+
+        @media screen and (min-width: 1200px) {
+            text-align: left;
+        }
     }
 
 

@@ -1,40 +1,95 @@
 .section-team {
-    @include section-padd (94px, 94px);
+    @include section-padd (60px, 60px);
+    
+    @media screen and (min-width: 1200px) {
+        @include section-padd (94px, 94px);
+    }
 
     background-color: $bg-color-secondary;
 
     &__title {
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         font-weight: 700;
-        font-size: 36px;
-        line-height: 1.1666;
+
+        font-size: 28px;
+        line-height: 1.1785;
+
     
         color: $color-primary;
 
-            
-                
+        @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+        font-size: 36px;
+        line-height: 1.1666;
+        }               
     }
 
     &__list {
-        display: flex;
+        display: block;
+
+        @media screen and (min-width: 768px) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            flex-wrap: nowrap;
+        }
     }
 
     &__item {
+        margin-bottom: 30px;
         position: relative;
         background-color: $bg-color-primary;
 
         box-shadow: $studio-box-shadow;
         border-radius: 0px 0px 4px 4px;
+
+        @media screen and (min-width: 768px) {
+                flex-basis: calc((100% / 2) - 30px);
+                margin-right: 30px;
+        
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+        
+                &:nth-last-child(-n + 2) {
+                    margin-bottom: 0;
+                }
+            }
+
+        @media screen and (min-width: 1200px) {
+            &:not(:last-child) {
+                margin-bottom: 0;
+                margin-right: 30px;
+            }
+        }
+       
     }
 
-    &__item:not(:last-child) {
-        margin-right: 30px;
+    &__img {
+        width: 450px;
+
+        @media screen and (min-width: 768px) {
+            width: 354px;         
+        }
+        @media screen and (min-width: 1200px) {
+            width: 270px;         
+        }   
     }
 
     &__cell {
-        padding: 30px 0;
         text-align: center;
+        padding-top: 30px;
+        padding-bottom: 24px;
+
+        @media screen and (min-width: 1200px) {
+            padding-bottom: 30px;
+        }
+
+        
+   
     }
 
     &__subtitle {

@@ -1,45 +1,92 @@
  .section-feature {
-    @include section-padd (94px, null);
+    @include section-padd (60px, 60px);
 
-
+    @media screen and (min-width: 1200px) {
+            @include section-padd (94px, 0);
+    }
 
     &__list {
-        display: flex;
-    }
+        display: block;
 
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-wrap: nowrap;
+        }
+
+    }
     &__item {
-        margin-right: 30px;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: 768px) {
+            flex-basis: calc((100% / 2) - 30px);
+            margin-right: 30px;
+
+            &:nth-child(2n) {
+                    margin-right: 0;
+                }
+            &:nth-last-child(-n + 2) {
+                margin-bottom: 0;
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 0;
+            flex-basis: content;
+            &:not(:last-child) {
+                margin-right: 30px;
+            
+     }
+
     }
 
-    &__item:last-child {
-    margin-right: 0;
-    } 
-
-    &__img {
-        width: 270px;
-        height: 120px;
-    
-        display: inline-flex;
+}
+    &__block {
+        display: flex;
         justify-content: center;
         align-items: center;
-        padding: 25px 100px 25px 100px;
-        background-color: $bg-color-secondary;
+        max-width: 450px;
+        height: 120px;
         border-radius: 4px;
         margin-bottom: 30px;
+        background-color: $bg-color-secondary;
+        
+        @media screen and (min-width: 768px) {
+                width: 354px;
+
+            }
+        
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+
+        }
+    }
+
+    &__img {
+        height: 70px;
+        width:  70px;
     }
 
     &__title {
+        text-align: center;
         margin-bottom: 10px;
         font-size: 14px;
         line-height: 1.14;
         text-transform: uppercase;
+
+        @media screen and (min-width: 1200px) {
+               text-align: left;
+        
+            }
+
     }
 
     &__text {
-        width: 270px;
         line-height: 1.71;
         color: $color-secondary;
     }
 
-
+    
 }

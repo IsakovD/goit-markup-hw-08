@@ -1,37 +1,79 @@
 .section-clients {
-    @include section-padd (94px, 94px);
+    @include section-padd (60px, 60px);
+    
+        @media screen and (min-width: 1200px) {
+            @include section-padd (94px, 94px);
+        }
 
     &__title {
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         font-weight: 700;
+        font-size: 28px;
+        line-height: 1.1785;
+
+    
+        color: $color-primary;
+
+        @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
         font-size: 36px;
         line-height: 1.1666;
-            
-        color: $color-primary;
+        }               
     }
     
     &__list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+
+        @media screen and (min-width: 1200px) {
+            flex-wrap: nowrap;
+        } 
     }
     
     &__item {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-        
-    &__item:not(:last-child) {
         margin-right: 30px;
+        margin-bottom: 30px;
+        
+        @media screen and (max-width: 767px) {
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+        &:nth-last-child(-n + 2) {
+            margin-bottom: 0;
+        }
+
+        @media screen and (min-width: 768px) {
+            flex-basis: calc((100% / 3) - 30px);
+
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+
+            &:nth-last-child(-n + 3) {
+                margin-bottom: 0;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            &:not(:last-child) {
+                margin-right: 30px;
+                margin-bottom: 0;
+            }
+        }
     }
     
     &__link {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 170px;
+        width: 210px;
         height: 92px;
         color: $svg-social-icon;
         border: 1px solid $svg-social-icon;
@@ -41,6 +83,14 @@
         transform: scale(1);
         transition: box-shadow $cubic, border-color $cubic, color $cubic,
         transform $cubic;
+
+        @media screen and (min-width: 678px) {
+            width: 226px;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 170px;
+        }
+
     }
         
     &__link:hover,

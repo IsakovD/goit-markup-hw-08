@@ -1,8 +1,9 @@
  .section-hero {
-    @include section-padd (200px, 200px);
+    @include section-padd (118px, 118px);
+
     position: relative;
-    width: 1600px;
-    height: 600px;
+    width: 480px;
+    height: 400px;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(to right, $bg-color-hero, $bg-color-hero),
@@ -12,19 +13,39 @@
     background-position: center;
     background-size: cover;
 
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        @include section-padd (200px, 200px);  
+
+        max-width: 1600px;
+        height: 600px;
+    }
+        
+
     &__title {
-        width: 686px;
+        width: 360px;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 30px;
+
+        font-size: 26px;
+        line-height: 1.62;
             
         font-weight: 900;
-        font-size: 44px;
-        line-height: 1.36;
+
         text-align: center;
         letter-spacing: 0.06em;
         text-transform: uppercase;
         color: $color-white;
+
+        @media screen and (min-width: 1200px) {
+            width: 696px;
+            font-size: 44px;
+            line-height: 1.36;
+        }
     }
  }
     
