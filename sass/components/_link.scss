@@ -30,6 +30,10 @@
             animation-delay: 100ms;
             animation-fill-mode: forwards;
             opacity: 0;
+
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
         }
 }
 
