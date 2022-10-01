@@ -9,7 +9,7 @@
     border-radius: 4px;
 
     opacity: 1;
-
+    z-index: 9999;
     transition: opacity $cubic;
 
     &.is-hidden {

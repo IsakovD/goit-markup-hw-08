@@ -159,7 +159,7 @@
 .h147 {
     height: auto; 
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width:768px) and (max-width: 1199px) {
         height: 147px;
     }
  }
