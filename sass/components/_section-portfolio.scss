@@ -64,7 +64,7 @@
         }
     }
     
-        @media screen and (max-width: 1199px) {
+        @media screen and (max-width: 1199px) and (min-width: 768px) {
             &__item:not(:nth-child(2n)) {
                 margin-right: $card-set-gap;
             }
@@ -100,6 +100,12 @@
         opacity: 1;
     }
     
+    &__img {
+        @media screen and (min-width: 480px) {
+            width: 450px;
+        }
+        
+    }
 
     &__thumb {
         position: relative;

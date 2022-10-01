@@ -1589,7 +1589,7 @@ body {
     margin-bottom: 0;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199px) and (min-width: 768px) {
   .grid__item:not(:nth-child(2n)) {
     margin-right: 30px;
   }
@@ -1620,6 +1620,11 @@ body {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
+}
+@media screen and (min-width: 480px) {
+  .grid__img {
+    width: 450px;
+  }
 }
 .grid__thumb {
   position: relative;
