@@ -13,12 +13,19 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+
+    display: flex;
+    
     padding: 48px 40px;
     background-color: $bg-color-primary;
     z-index: 999;
 
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 }
 
 .menu-container.is-open {
@@ -35,9 +42,14 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+
+
 }
 .mobile-social {
     display: flex;
+     
 
     &__item {
         
@@ -62,4 +74,19 @@
         }
         
     }
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+
+
+}
+
+.tablet-menu {
+    display: none;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }   
+
 }

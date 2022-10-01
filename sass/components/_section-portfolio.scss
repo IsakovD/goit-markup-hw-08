@@ -1,17 +1,38 @@
 .section-portfolio {
-    @include section-padd (94px, 94px);
+    @include section-padd (60px, 60px);
+    
+        @media screen and (min-width: 1200px) {
+            @include section-padd (94px, 94px);
+        }
 
     &__block:first-child {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 50px;
+        }
+        
     }
 }
 
 .filter-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 10px;
+
+    @media screen and (min-width: 768px) {
+            justify-content: center;
+            flex-wrap: nowrap;
+            row-gap: 0;
+        }
+
+
 
     &__item:not(:last-child) {
         margin-right: 8px;
+     
+        
     }
 
 }
@@ -19,20 +40,50 @@
 .grid {
 	display: flex;
 	flex-wrap: wrap;
-
-
+    width: 100%;
+        
     &__item {
-    flex-basis: calc(($grid-item-size / 3) - $card-set-gap);
-    }
-
-    &__item:not(:nth-child(3n)) {
-        margin-right: $card-set-gap;
+        flex-basis: calc(($grid-item-size-mobile / 1) - $card-set-gap);
+        
+        
+            @media screen and (min-width: 768px) {
+                flex-basis: calc(($grid-item-size-tablet / 2) - $card-set-gap);
+            
+            }
+            @media screen and (min-width: 1200px) {
+                flex-basis: calc(($grid-item-size / 3) - $card-set-gap);
+            }
+        
     }
     
-    &__item:not(:nth-last-child(-n + 3)) {
+    &__item:not(:last-child) {
         margin-bottom: $card-set-gap;
-    }
 
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+        }
+    }
+    
+        @media screen and (max-width: 1199px) {
+            &__item:not(:nth-child(2n)) {
+                margin-right: $card-set-gap;
+            }
+    
+            &__item:not(:nth-last-child(-n + 2)) {
+                margin-bottom: $card-set-gap;
+            }  
+        }
+
+    @media screen and (min-width: 1200px) {
+
+        &__item:not(:nth-child(3n)) {
+            margin-right: $card-set-gap;
+        }
+    
+        &__item:not(:nth-last-child(-n + 3)) {
+            margin-bottom: $card-set-gap;
+        }
+    }
     &__link {
         display: block;
         transition: box-shadow $cubic;
@@ -95,7 +146,18 @@
 	    padding-right: 24px;
 	    border: 1px solid $box-line-color;
 	    border-top: none;
+
+
     }
+
+.h147 {
+    height: auto; 
+
+    @media screen and (min-width: 768px) {
+        height: 147px;
+    }
+ }
+
 
     &__title {
         margin-bottom: 4px;

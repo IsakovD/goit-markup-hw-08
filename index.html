@@ -27,6 +27,50 @@
 			<div class="container">
 				<nav class="nav">
 					<a href="./index.html" class="logo"> <span class="logo__element">Web</span>Studio</a>
+					<div class="tablet-menu">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="./index.html" class="link link--current nav__link">Студія</a>
+							</li>
+							<li class="nav__item"><a href="./portfolio.html" class="link nav__link">Портфоліо</a></li>
+							<li class="nav__item"><a href="" class="link nav__link">Контакти</a></li>
+						</ul>
+
+						<ul class="header__list">
+							<li class="header__item">
+								<a href="mailto:info@devstudio.com" class="link header__link">
+									<svg class="header__icon">
+										<use href="./images/symbol-defs.svg#icon-envelope" Width="16px" Height="12px"></use>
+									</svg>
+
+									info@devstudio.com
+								</a>
+							</li>
+							<li class="header__item">
+								<a href="tel:+380961111111" class="link header__link">
+									<svg class="header__icon header__icon--smartphone">
+										<use href="./images/symbol-defs.svg#icon-smartphone" Width="10px" Height="16px"></use>
+									</svg>
+									+38 096 111 11 11</a
+								>
+							</li>
+						</ul>
+
+						<ul class="mobile-social">
+							<li class="mobile-social__item">
+								<a class=" " href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram </a>
+							</li>
+							<li class="mobile-social__item">
+								<a class=" " href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter </a>
+							</li>
+							<li class="mobile-social__item">
+								<a class="" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook </a>
+							</li>
+							<li class="mobile-social__item">
+								<a class=" " href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn </a>
+							</li>
+						</ul>
+					</div>
 					<button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
 						<svg class="menu-toggle__icon">
 							<use href="./images/symbol-defs.svg#icon-mobile-menu" Width="40px" Height="40px"></use>
@@ -69,40 +113,18 @@
 
 							<ul class="mobile-social">
 								<li class="mobile-social__item">
-									<a
-										class=" "
-										href="https://www.instagram.com/"
-										target="_blank"
-										rel="noopener noreferrer"
-									>Instagram
+									<a class=" " href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+										>Instagram
 									</a>
 								</li>
 								<li class="mobile-social__item">
-									<a
-										class=" "
-										href="https://twitter.com/"
-										target="_blank"
-										rel="noopener noreferrer"
-									>Twitter
-									</a>
+									<a class=" " href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter </a>
 								</li>
 								<li class="mobile-social__item">
-									<a
-										class=""
-										href="https://www.facebook.com/"
-										target="_blank"
-										rel="noopener noreferrer"
-									>Facebook
-									</a>
+									<a class="" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook </a>
 								</li>
 								<li class="mobile-social__item">
-									<a
-										class=" "
-										href="https://linkedin.com/"
-										target="_blank"
-										rel="noopener noreferrer"
-									>LinkedIn
-									</a>
+									<a class=" " href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn </a>
 								</li>
 							</ul>
 						</div>
@@ -242,15 +264,33 @@
 					<ul class="section-work__list">
 						<li class="section-work__item">
 							<p class="section-work__text">Десктопні додатки</p>
-							<img src="./images/index/box-1.jpg" alt="кодинг" width="370" height="294" />
+							<img
+								srcset="./images/index/img-1-box-dt@1x.jpg 1x, ./images/index/img-1-box-dt@2x.jpg 2x"
+								src="./images/index/img-1-box-dt@1x.jpg"
+								alt="кодинг"
+								width="370"
+								height="294"
+							/>
 						</li>
 						<li class="section-work__item">
 							<p class="section-work__text">Мобільні додатки</p>
-							<img src="./images/index/box-2.jpg" alt="дизайн продукту" width="370" height="294" />
+							<img
+								srcset="./images/index/img-2-box-dt@1x.jpg 1x, ./images/index/img-2-box-dt@2x.jpg 2x"
+								src="./images/index/img-2-box-dt@1x.jpg"
+								alt="дизайн продукту"
+								width="370"
+								height="294"
+							/>
 						</li>
 						<li class="section-work__item">
 							<p class="section-work__text">Дизайнерські</p>
-							<img src="./images/index/box-3.jpg" alt="графічний дизайн" width="370" height="294" />
+							<img
+								srcset="./images/index/img-3-box-dt@1x.jpg 1x, ./images/index/img-3-box-dt@2x.jpg 2x"
+								src="./images/index/img-3-box-dt@1x.jpg"
+								alt="графічний дизайн"
+								width="370"
+								height="294"
+							/>
 						</li>
 					</ul>
 				</div>
@@ -264,11 +304,18 @@
 					<ul class="section-team__list">
 						<li class="section-team__item">
 							<img
+								srcset="
+									./images/index/img-1_com-mb-450.jpg 450w,
+									./images/index/img-1_com-mb-900.jpg 900w,
+									./images/index/img-1-com-tb-354.jpg 354w,
+									./images/index/img-1-com-tb-708.jpg 708w,
+									./images/index/img-1-com-dt-270.jpg 270w,
+									./images/index/img-1-com-dt-540.jpg 540w
+								"
+								sizes=" (min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
 								class="section-team__img"
-								src="./images/index/img-1.jpg"
+								src="./images/index/img-1_com-mb-450.jpg"
 								alt="Ігор Дем'яненко"
-								width="270"
-								height="260"
 							/>
 							<div class="section-team__cell">
 								<h3 class="section-team__subtitle">Ігор Дем'яненко</h3>
@@ -317,11 +364,18 @@
 						</li>
 						<li class="section-team__item">
 							<img
+								srcset="
+									./images/index/img-2_com-mb-450.jpg 450w,
+									./images/index/img-2_com-mb-900.jpg 900w,
+									./images/index/img-2-com-tb-354.jpg 354w,
+									./images/index/img-2-com-tb-708.jpg 708w,
+									./images/index/img-2-com-dt-270.jpg 270w,
+									./images/index/img-2-com-dt-540.jpg 540w
+								"
+								sizes=" (min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
 								class="section-team__img"
-								src="./images/index/img-2.jpg"
+								src="./images/index/img-2_com-mb-450.jpg"
 								alt="Ольга Рєпіна"
-								width="270"
-								height="260"
 							/>
 							<div class="section-team__cell">
 								<h3 class="section-team__subtitle">Ольга Рєпіна</h3>
@@ -370,11 +424,18 @@
 						</li>
 						<li class="section-team__item">
 							<img
+								srcset="
+									./images/index/img-3_com-mb-450.jpg 450w,
+									./images/index/img-3_com-mb-900.jpg 900w,
+									./images/index/img-3-com-tb-354.jpg 354w,
+									./images/index/img-3-com-tb-708.jpg 708w,
+									./images/index/img-3-com-dt-270.jpg 270w,
+									./images/index/img-3-com-dt-540.jpg 540w
+								"
+								sizes=" (min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
 								class="section-team__img"
-								src="./images/index/img-3.jpg"
+								src="./images/index/img-3_com-mb-450.jpg"
 								alt="Микола Тарасов"
-								width="270"
-								height="260"
 							/>
 							<div class="section-team__cell">
 								<h3 class="section-team__subtitle">Микола Тарасов</h3>
@@ -423,11 +484,18 @@
 						</li>
 						<li class="section-team__item">
 							<img
+								srcset="
+									./images/index/img-4_com-mb-450.jpg 450w,
+									./images/index/img-4_com-mb-900.jpg 900w,
+									./images/index/img-4-com-tb-354.jpg 354w,
+									./images/index/img-4-com-tb-708.jpg 708w,
+									./images/index/img-4-com-dt-270.jpg 270w,
+									./images/index/img-4-com-dt-540.jpg 540w
+								"
+								sizes=" (min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
 								class="section-team__img"
-								src="./images/index/img-4.jpg"
+								src="./images/index/img-4_com-mb-450.jpg"
 								alt="Михайло Єрмаков"
-								width="270"
-								height="260"
 							/>
 							<div class="section-team__cell">
 								<h3 class="section-team__subtitle">Михайло Єрмаков</h3>
