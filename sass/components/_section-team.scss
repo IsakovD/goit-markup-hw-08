@@ -39,12 +39,17 @@
     }
 
     &__item {
-        margin-bottom: 30px;
+        
         position: relative;
         background-color: $bg-color-primary;
 
         box-shadow: $studio-box-shadow;
         border-radius: 0px 0px 4px 4px;
+
+        &:not(:last-child) {
+                margin-bottom: 30px;
+            
+            }
 
         @media screen and (min-width: 768px) {
                 flex-basis: calc((100% / 2) - 30px);

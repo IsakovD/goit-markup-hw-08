@@ -2,7 +2,7 @@
     @include section-padd (118px, 118px);
 
     position: relative;
-    max-width: 480px;
+    min-width: 320px;
     height: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -67,7 +67,7 @@
         
 
     &__title {
-        width: 360px;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 30px;

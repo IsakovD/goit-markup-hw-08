@@ -19,6 +19,10 @@
         border-radius: 2px;
             
         transition: border-color $cubic, background-color $cubic;
+
+        @media screen and (max-width: 479px) {
+                width: 22px
+            }
     }
 
     &--none:checked + &__checker-icon {
@@ -38,6 +42,8 @@
         background-color: transparent;
         background-size: contain;
         background-position: center;
+
+        
     }
 }
 
